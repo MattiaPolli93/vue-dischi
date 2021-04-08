@@ -48,7 +48,7 @@ header h1 {
     width: 10%;
     height: 75%;
 }
-    
+
 .buttons-container button {
     width: 70px;
     height: 25px;
@@ -77,6 +77,10 @@ header h1 {
     cursor: pointer;
 }
 
+.buttons-container-hidden {
+    display: none;
+}
+
 /* Cards container */
 .cards-container {
     height: calc(100vh - 80px);
@@ -103,6 +107,7 @@ header h1 {
     border-radius: 5%;
     opacity: 0.9;
     cursor: pointer;
+    margin-bottom: 15px;
 }
 
 .cd-card img {
@@ -127,4 +132,83 @@ header h1 {
 
 .cd-card p:first-of-type{
     margin-bottom: 3px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+    header {
+        padding: 0 15px;
+    }
+
+    .ux-features {
+        width: 15%;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    header {
+        padding: 0 15px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .ux-features {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        padding: 0 20px;
+    }
+
+    .ux-features {
+        width: 100px;
+        margin-right: 0;
+    }
+
+    .buttons-container {
+        display: flex;
+    }
+
+    .buttons-container button:first-child {
+        margin-right: 0;
+    }
+
+    .buttons-container button {
+        width: 35px;
+        height: 35px;
+        border-radius: 20px;
+        margin: 0 10px;
+     }
+
+    .year {
+        display: none;
+    }
+
+    .ux-features #select {
+        width: 110px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header {
+        padding: 0 15px;
+    }
+
+    header h1 {
+        font-size: 25px;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 435px){
+    header h1 {
+        font-size: 20px; 
+        padding: 6px 5px;
+    }    
 }

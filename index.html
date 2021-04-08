@@ -19,10 +19,18 @@
 </head>
 <body>
     <div id="app" class="wrapper">
+        
+        <!-- Header -->
         <header class="flex">
+
+            <!-- Logo (on the left)-->
             <img src="img/logo.png" alt="Logo">
             <h1>The Albums that made Music History</h1>
+
+            <!-- UX features (on the right)-->
             <div class="ux-features flex">
+
+                <!-- Select options -->
                 <select id="select" v-model="selected">
                     <option disabled value="">Sort by Genre</option>
                     <option value="">All Genres</option>
@@ -31,12 +39,17 @@
                     <option value="Jazz">Jazz</option>
                     <option value="Metal">Metal</option>
                 </select>
+
+                <!-- Buttons -->
                 <div class="buttons-container flex">
-                    <button @click="sortByOldestYear()">Year: <i class="far fa-hand-point-up"></i></button>
-                    <button @click="sortByRecentYear()">Year: <i class="far fa-hand-point-down"></i></button>
+                    <button @click="sortByOldestYear()"><span class="year">Year: </span> <i class="far fa-hand-point-up"></i></button>
+                    <button @click="sortByRecentYear()"><span class="year">Year: </span><i class="far fa-hand-point-down"></i></button>
                 </div>
+                                
             </div>
         </header>
+
+        <!-- Album-cards container -->
         <div class="cards-container">
             <div class="flex container">
                 <div class="cd-card flex" v-for="(album) in filterMusic">
