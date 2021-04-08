@@ -20,14 +20,18 @@
         <header class="flex">
             <img src="img/logo.png" alt="Logo">
             <h1>The Albums that made Music History</h1>
-            <select id="select" v-model="selected">
-                <option disabled value="">Sort by Genre</option>
-                <option value="">All Genres</option>
-                <option value="Rock">Rock</option>
-                <option value="Pop">Pop</option>
-                <option value="Jazz">Jazz</option>
-                <option value="Metal">Metal</option>
-            </select>
+            <div class="ux-features flex">
+                <select id="select" v-model="selected">
+                    <option disabled value="">Sort by Genre</option>
+                    <option value="">All Genres</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Metal">Metal</option>
+                </select>
+                <button @click="sortByOldestYear()"></button>
+                <button @click="sortByRecentYear()"></button>
+            </div>
         </header>
         <div class="cards-container">
             <div class="flex container">
@@ -38,10 +42,9 @@
                     <p>{{album.year}}</p>
                 </div>
             </div>
-        </div>
-            
+        </div>            
     </div>
-
+    
     <!-- Main JS file -->
     <script src="js/script.js"></script>
 </body>

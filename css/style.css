@@ -40,11 +40,24 @@ header h1 {
     letter-spacing: 1px;
 }
 
-#select {
-    width: 10%;
+.ux-features {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 220px;
+    height: 75%;
+}
+
+.ux-features #select {
     text-align: center;
     font-size: 15px;
     font-weight: 700;
+}
+
+.ux-features button {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
 }
 
 /* Cards container */
