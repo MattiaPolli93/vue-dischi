@@ -16,13 +16,22 @@
     <title>Vue Music Discs</title>
 </head>
 <body>
-    <div class="wrapper">
+    <div id="app" class="wrapper">
         <header class="flex">
+            <img src="img/logo.png" alt="Logo">
             <h1>The Albums that made Music History</h1>
+            <select id="select" v-model="selected">
+                <option disabled value="">Sort by Genre</option>
+                <option value="">All Genres</option>
+                <option value="Rock">Rock</option>
+                <option value="Pop">Pop</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Metal">Metal</option>
+            </select>
         </header>
         <div class="cards-container">
-            <div id="app" class="flex">
-                <div class="cd-card flex" v-for="(album) in musicAlbums">
+            <div class="flex container">
+                <div class="cd-card flex" v-for="(album) in filterMusic">
                     <img :src="album.poster" :alt="album.title">
                     <h3>{{album.title}}</h3>
                     <p>{{album.author}}</p>

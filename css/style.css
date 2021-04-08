@@ -22,9 +22,14 @@
 /* Header */
 header {
     height: 80px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 25px;
     background-color: #2e3a46;
+}
+
+header img {
+    width: 50px;
 }
 
 header h1 {
@@ -35,13 +40,19 @@ header h1 {
     letter-spacing: 1px;
 }
 
+#select {
+    width: 10%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+}
+
 /* Cards container */
 .cards-container {
     height: calc(100vh - 80px);
 }
 
-/* Vue #app */
-#app {
+.container {
     justify-content: space-around;
     flex-wrap: wrap;
     height: 100%;
@@ -61,6 +72,7 @@ header h1 {
     background-color: #2e3a46;
     border-radius: 5%;
     opacity: 0.9;
+    cursor: pointer;
 }
 
 .cd-card img {
