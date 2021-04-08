@@ -16,8 +16,21 @@
     <title>Vue Music Discs</title>
 </head>
 <body>
-    <div id="app">
-        
+    <div class="wrapper">
+        <header class="flex">
+            <h1>The Albums that made Music History</h1>
+        </header>
+        <div class="cards-container">
+            <div id="app" class="flex">
+                <div class="cd-card flex" v-for="(album) in musicAlbums">
+                    <img :src="album.poster" :alt="album.title">
+                    <h3>{{album.title}}</h3>
+                    <p>{{album.author}}</p>
+                    <p>{{album.year}}</p>
+                </div>
+            </div>
+        </div>
+            
     </div>
 
     <!-- Main JS file -->
